@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: system-ui, sans-serif;
+  user-select: none;
+  background-color: var(--main-bg-color);
+  color: var(--main-fg-color);
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  width: 50%;
+  min-width: 300px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+button[push] {
+  border: none;
+  border-radius: 2px;
+  background-color: var(--main-button-color);
+  color: var(--main-fg-color);
+  padding: 5px 10px;
+  cursor: pointer;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+button[push]:hover {
+  background-color: var(--main-button-hover-color);
+}
+
+button[push]:disabled {
+  background-color: var(--main-button-disaled-color);
+  cursor: inherit;
+}
+
+button[push][selected='true'] {
+  background-color: var(--main-button-pushed-color);
+}
+
+button[row] {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background-color: var(--li-bg-color);
+  color: var(--main-fg-color);
+  padding: 5px 10px;
+  cursor: pointer;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+button[row]:hover {
+  background-color: var(--li-bg-hover-color);
+}
+
+input[type='text'] {
+  font-size: 16px;
+  line-height: 30px;
+  padding: 0 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  background-color: var(--input-bg-color);
+  color: var(--main-fg-color);
+}
+
+textarea {
+  display: block;
+  resize: vertical;
+  width: 100%;
+  height: 300px;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  overflow: auto;
+  border: none;
+  outline: none;
+  background-color: var(--input-bg-color);
+  color: var(--main-fg-color);
+}
+
+.form_top > * + * {
+  margin-top: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.text_wide {
+  width: 100%;
+}
+
+.text_with_button {
+  display: grid;
+  grid-template-columns: 1fr 30px;
+}
+
+:root {
+  --main-bg-color: #222;
+  --main-fg-color: #eee;
+  --main-border-color: #555;
+  --main-hover-color: #555;
+  --main-focus-color: #0a0;
+  --input-bg-color: #333;
+  --sub-bg-color: #333;
+  --sub-hover-color: #555;
+  --sub-fg-color: #5aa;
+  --disable-fg-color: #999;
+  --main-button-color: #44e;
+  --main-button-hover-color: #449;
+  --main-button-disaled-color: #555;
+  --main-button-pushed-color: #449;
+  --li-bg-color: #333;
+  --li-bg-hover-color: #555;
+}
